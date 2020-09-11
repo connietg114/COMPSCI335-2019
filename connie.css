@@ -1,0 +1,94 @@
+body,
+html {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#logo {
+    filter: invert(100%);
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(21, 21, 104);
+    justify-content: space-between;
+    width: 100%;
+    padding: .5em 0 .5em 0;
+    text-align: center;
+}
+
+h2 {
+    left: 100%;
+    font: 2em sans-serif;
+    font-size: 3vmax;
+    font-weight: bold;
+    margin: 0 auto;
+    color: rgb(245, 245, 245);
+    outline: black;
+    letter-spacing: 2.5px;
+}
+
+h1 {
+    font: 2em sans-serif;
+    font-weight: bold;
+    font-size: 2.7vmax;
+    text-shadow: 2px 2px #FF0000;
+}
+
+.navBar {
+    background-color: rgb(23, 122, 122);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    width: 100%;
+    display: center;
+}
+
+.navBar button {
+    background-color: rgb(23, 122, 122);
+    justify-content: center;
+    border: none;
+    color: white;
+    padding: 15px 100px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.navBar button:hover {
+    background-color: rgb(59, 89, 119);
+}
+
+.navBar button:active {
+    color: rgb(59, 89, 119);
+    background-color: white;
+}
+
+.body {
+    width: 100%;
+    height: fit-content;
+}
+
+.displayHomeContent {
+    color: black;
+    text-align: center;
+    display: block;
+    overflow: auto;
+    font-size: 19px;
+    margin: auto;
+}
+
+#homeImage {
+    width: 80%;
+    /*height: 50%;*/
+}
+
+.hide {
+    display: none;
+}

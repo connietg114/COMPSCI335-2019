@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The BoB Doran Musuem of Computing</title>
+    <link rel="stylesheet" href="ctan381.css" type="text/css">
+    <script src="ctan381.js"></script>
+
+</head>
+
+<body style="background-color: rgb(240, 213, 180);">
+    <header>
+        <div class="topBar">
+            <img src="http://redsox.uoa.auckland.ac.nz/ms/logo.svg" style="margin-left: 5%;" alt="profile" width="135" height="135" id="logo">
+            <h2>The Bob Doran Musuem of Computing </h2>
+        </div>
+
+
+        <div class="navBar">
+            <button id="hometab" class="homeButton" onclick="displayHomePage()"> Home</button>
+            <button id="items" class="button" onclick="displayItems()"> Display</button>
+            <button id="news" class="button" onclick="displayNews()"> News</button>
+            <button id="shop" class="button" onclick="displayShop('shop')"> Shop </button>
+            <button id="register" class="button" onclick="displayRegister()">Register</button>
+            <button id="guestbook" class="button" onclick="displayGuestBook()"> Guest Book</button>
+            <button id="loginpage" class="button" onclick="displayLogin()">Log In</button>
+
+
+        </div>
+    </header>
+
+    <div class="w3-container body" style="width: 90%; margin-left: 5%;">
+        <div id="pageContent">
+
+        </div>
+        <div class=" HomeContent" id="homePage">
+            <h1> Home </h1>
+            <div class="w3-container">
+
+
+                <p>
+                    Welcome to The Bob Doran Museum of Computing. You can learn more about the displays here. If you are intrigued by what you find here and live close to Auckland, or are visiting the city, please feel free to drop in to the school and see the displays for
+                    yourself. We are located at the University on Princes Street and are always open during normal office hours and also in the evenings and on the weekends when classes are in session.
+                </p>
+            </div>
+            <br>
+            <img src="https://www.cs.auckland.ac.nz/historydisplays/1993HandbookA.jpg" style="margin-left:30%;width:450px;height:360px;" alt="clockTower" id="homeImage">
+        </div>
+
+        <div class="hide" id="displaySearch" style="margin-left: 5%;">
+            <h1> Display </h1>
+            <input type='text' id='search' placeholder="&#x1F50D;" onkeyup="search()">
+            <br></br>
+            <div id="searchResult"></div>
+        </div>
+
+        <div class="hide" id="displayShopContent" style="margin-left: 5%;">
+
+            <h1>Shop</h1>
+            <input type='text' id='shopSearch' placeholder="&#x1F50D;" onkeyup="displayShop('shopSearch')">
+
+
+            <div id="shopSearchResult"></div>
+        </div>
+    </div>
+
+    <div class="hide" id="displayRegister" style="margin-left: 5%;">
+        <h1>Join Us!</h1>
+        <label for="username">Username: </label>
+        <input type="text" id="username">
+        <br></br>
+
+        <label for="password">Password: </label>
+        <input type="password" id="password">
+        <br></br>
+
+        <label for="address">Address: </label>
+        <input type="text" id="address">
+        <br></br>
+
+        <input type="submit" value="Submit" id="regSubmit" onclick="submitRegister()">
+        <div id="showMessage"></div>
+    </div>
+
+    <div class="hide" id="displayLogin" style="margin-left: 5%;">
+        <h1>Please Login</h1>
+        <label for="loginUsername">Username: </label>
+        <input type="text" id="loginUsername">
+        <br></br>
+
+        <label for="loginPassword">Password: </label>
+        <input type="password" id="loginPassword">
+        <br></br>
+
+        <input type="submit" value="Log In" id="login" onclick="LogIn()">
+        <div id="loginMessage"></div>
+    </div>
+
+    <div class="hide" id="guestbookPage" style="margin-left: 5%;">
+        <h1>Guest Book</h1>
+        <p>Please sign our guest book. Your comments are greatly appreciated.</p>
+        <div id="displayGuestBook"></div>
+        <input type="text" id="comment" required>
+        <p>Your name:</p>
+        <input type="text" id="commentName" required>
+        <input type="submit" id="submitButton" value="Submit" onclick="submitComment()">
+        <br></br>
+        <div>
+            <iframe src="http://redsox.uoa.auckland.ac.nz/ms/MuseumService.svc/htmlcomments" id="iframe" style="width: 60%;"></iframe>
+        </div>
+    </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+    // (function() {
+    //     displayHomePage();
+    // })();
+</script>
+
+
+</html>
